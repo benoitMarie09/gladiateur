@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="creation.js" async></script>
+    <link rel="stylesheet" href="creation.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form action="#" method="get">
+      <fieldset id="classSelector">
+        <legend>Classe</legend>
+        <label>
+          <input
+            type="radio"
+            name="classe"
+            value="guerrier"
+            autocomplete="off"
+            onclick="handleRadioClick(event)" />
+          <img src="guerrier.png" alt="guerrier" />
+        </label>
+        <label>
+          <input
+            type="radio"
+            name="classe"
+            value="archer"
+            autocomplete="off"
+            onclick="handleRadioClick(event)" />
+          <img src="archer.png" alt="archer" />
+        </label>
+        <label>
+          <input
+            type="radio"
+            name="classe"
+            value="mage"
+            autocomplete="off"
+            onclick="handleRadioClick(event)" />
+          <img src="mage.png" alt="mage" />
+        </label>
+        <label>
+          <input
+            type="radio"
+            name="classe"
+            value="assassin"
+            autocomplete="off"
+            onclick="handleRadioClick(event)" />
+          <img src="assassin.png" alt="assassin" />
+        </label>
+      </fieldset>
+      <fieldset id="formGladiateur">
+        <legend>Caractéristiques</legend>
+        <label>Nom :<input class="nom" type="text" name="nom" /></label>
+        <label class="points"
+          >Points :
+          <input
+            class="input-caract"
+            readonly
+            type="number"
+            name="points"
+            autocomplete="off"
+        /></label>
+        <label class="stat"
+          >Vie :<button
+          class="decrease btn"
+          type="button"
+          value="Decrement"
+          onclick="decrease(event)">
+          -
+        </button><input
+            class="input-caract"
+            type="number"
+            name="vie"
+            step="5"
+            autocomplete="off"
+            readonly />
+            <button
+            class="increase btn"
+            value="Increment"
+            type="button"
+            onclick="increase(event)">
+            +</button
+          ></label
+        >
+        <label class="stat"
+          >Stamina :<button
+          class="decrease btn"
+          type="button"
+          value="Decrement"
+          onclick="decrease(event)">
+          -
+        </button><input
+            class="input-caract"
+            type="number"
+            name="stamina"
+            step="5"
+            autocomplete="off"
+            readonly />
+            <button
+            class="increase btn"
+            value="Increment"
+            type="button"
+            onclick="increase(event)">
+            +</button
+          ></label
+        >
+        <label class="stat"
+          >Force :
+          <button
+            class="decrease btn"
+            type="button"
+            value="Decrement"
+            onclick="decrease(event)">
+            -
+          </button><input
+            class="input-caract"
+            type="number"
+            name="force"
+            autocomplete="off"
+            readonly
+            oninput="handleChange(event)" />
+            <button
+            class="increase btn"
+            value="Increment"
+            type="button"
+            onclick="increase(event)">
+            +</button
+          >
+        </label>
+        <label class="stat"
+          >agilite :<button
+          class="decrease btn"
+          type="button"
+          value="Decrement"
+          onclick="decrease(event)">
+          -
+        </button>
+          <input
+            autocomplete="off"
+            class="input-caract"
+            type="number"
+            name="agilite"
+            readonly
+            oninput="handleChange(event)" />
+            <button
+            class="increase btn"
+            value="Increment"
+            type="button"
+            onclick="increase(event)">
+            +</button
+          ></label
+        >
+        <label class="stat"
+          >intelligence :<button
+          class="decrease btn"
+          type="button"
+          value="Decrement"
+          onclick="decrease(event)">
+          -
+        </button>
+          <input
+            autocomplete="off"
+            class="input-caract"
+            type="number"
+            name="intelligence"
+            readonly
+            oninput="handleChange(event)" />
+            <button
+            class="increase btn"
+            value="Increment"
+            type="button"
+            onclick="increase(event)">
+            +</button
+          ></label
+        >
+        <button class="submit" type="submit">Créer</button>
+      </fieldset>
+      
+    </form>
+  </body>
+</html>
