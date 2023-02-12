@@ -1,3 +1,11 @@
+:root {
+  --background-color: #d3faed;
+  --button-color: rgb(18, 148, 105);
+  --input-color: rgb(124, 209, 177);
+  --selected-color: #3d9412;
+  --selected-border-color: #691294;
+}
+
 /* HIDE RADIO */
 [type="radio"] {
   position: absolute;
@@ -13,13 +21,14 @@
 
 /* CHECKED STYLES */
 [type="radio"]:checked + img {
-  outline: 2px solid #f00;
-  background-color: rgb(241, 106, 43);
+  outline: 2px solid var(--selected-border-color);
+  background-color: var(--selected-color);
 }
 
 form {
   width: 400px;
   display: flex;
+  background-color: var(--background-color);
 }
 
 #classSelector {
@@ -30,13 +39,14 @@ form {
 }
 
 img {
+  border-radius: 10px;
   width: 50px;
   padding: 5px;
 }
 
 .input-caract {
   text-align: center;
-  background-color: rgb(124, 209, 177);
+  background-color: var(--input-color);
   border: none;
   padding: 5px;
   font-size: 1em;
@@ -75,8 +85,9 @@ input[type="number"] {
 .nom {
   border-style: double;
   padding: 5px;
-  border-radius: 5px 5px 5px 5px;
-  background-color: rgb(124, 209, 177);
+  border-radius: 10px 10px 10px 10px;
+  background-color: var(--input-color);
+  font-size: 1em;
 }
 
 .btn {
@@ -84,15 +95,15 @@ input[type="number"] {
 }
 .increase {
   border-radius: 0px 5px 5px 0px;
-  background-color: rgb(83, 173, 41);
+  background-color: var(--button-color);
 }
 .decrease {
   border-radius: 5px 0px 0px 5px;
-  background-color: rgb(133, 199, 102);
+  background-color: var(--button-color);
 }
 .submit {
   border: none;
   padding: 5px;
   font-size: 1em;
-  background-color: rgb(18, 148, 105);
+  background-color: var(--button-color);
 }
